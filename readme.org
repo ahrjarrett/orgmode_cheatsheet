@@ -1,23 +1,12 @@
 #+TITLE: Spacemacs Org-Mode Cheatsheet
 #+AUTHOR: Andrew Jarrett
+#+EMAIL: ahrjarrett@gmail.com
 
 These are the keybindings that I find useful from within Spacemacs, assuming evil-mode is on and generally in order of discovery, with an emphasis on applications in org-mode. I think there is a correlation between necessity of use and when that particular command becomes useful, and as such, this cheatsheet itelf documents my exploration of and dive into [[http://spacemacs.org/layers/+emacs/org/README.html][Spacemacs’ Org Layer]].
 
 *Contributing:* Feel free to submit a pull request if you find gaps :)
 
 At any point from within Spacemacs you can access the help menu for your current major mode/layer by hitting `C-h i`. Appropriately, the first section is about navigating the manual itself, which isn’t exactly straightforward given the sometimes odd combination of keybindings between the two (Vim and Emacs).
-
-* Emacs Manual (DocView)
-
-[[https://www.gnu.org/software/emacs/manual/html_node/emacs/DocView-Navigation.html][DocView Navigation Resource]]
-
-| Command | Action                                        |
-|---------+-----------------------------------------------|
-| =n=     | doc-view-next-page                            |
-| =p=     | Previous page                                 |
-| =<=     | doc-view-first-page                           |
-| ???     | doc-view-last-page (=>= doesn’t seem to work) |
-| =g=     | doc-view-goto-page                            |
 
 * Spacemacs Cheatsheet
 
@@ -37,7 +26,6 @@ Resouce: [[https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_cheat_s
 
 * Org Mode
 ** Org-Mode Command Cheatsheet
-
 *** Todos
  | Org Mode Command | Behavior                                            | Mode                     |
  |------------------+-----------------------------------------------------+--------------------------|
@@ -69,7 +57,6 @@ Resouce: [[https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_cheat_s
  | =<SPC> C c=      | org-capture                                                         | Command                                  |
 
 ** Org Capture
-
  Org capture is a study unto itself. [[http://cestlaz.github.io/posts/using-emacs-23-capture-1/#.WiY5ILQ-fOQ][Here’s a great blog post on the subject]].
 
  *Shortcut:* Todo Items are prepended as nodes to “Todo Items” tree automatically with =org-capture t=, which is currently bound as =SPC C c=, then =t= for “Todo Item”. Done forget to add this snipped to your Spacemacs file for it to work:
@@ -90,14 +77,33 @@ Resouce: [[https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_cheat_s
  fast.*”
 
  I feel like that last part is key.
+* Emacs Manual (DocView)
+
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/DocView-Navigation.html][DocView Navigation Resource]]
+
+| Command | Action                                        |
+|---------+-----------------------------------------------|
+| =n=     | doc-view-next-page                            |
+| =p=     | Previous page                                 |
+| =<=     | doc-view-first-page                           |
+| ???     | doc-view-last-page (=>= doesn’t seem to work) |
+| =g=     | doc-view-goto-page                            |
+
 * Emacs Lisp
 ** Major Mode: Emacs Lisp
-
 | Command                     | Behavior                                           | Mode (if applicable)            |
 |-----------------------------+----------------------------------------------------+---------------------------------|
 | =C-q (= or =C-q)=           | Disable Smart Parens While Writing elisp           | Insert                          |
 | =M-x M-x info= or =C-h i=   | Jump into Emacs reference manual from within Emacs | Command, in any context         |
 | =M-x lisp-interaction-mode= | Enable LISP interaction mode (usually in scratch)  | Scratch buffer (test elsewhere) |
+
+** Major Mode: Lisp Interactive Mode
+This mode is useful for learning Emacs LISP because it allows you to, from within the scratch buffer, evaluate elisp. The following chart assumes the context of the scratch buffer, from within =lisp-interaction-mode=.
+| Command                     | Behavior                          | Mode                                |
+|-----------------------------+-----------------------------------+-------------------------------------|
+| =M-x lisp-interaction-mode= | Enter LISP Interactive major mode | Scratch buffer, possibly elsewhere? |
+| =C-j=                       | /eval-print-last-sexp/ at point   | LISP Interactive                    |
+See also the documenatation on [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Interaction.html][Lisp Interaction buffers]].
 
 * Ivy
 ** Spacemacs Ivy Cheatsheet [[http://develop.spacemacs.org/layers/+completion/ivy/README.html][(Lightweight alternative to HELM)]]
