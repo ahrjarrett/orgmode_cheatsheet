@@ -505,3 +505,15 @@ you should place your code here."
  '(default ((t (:background nil)))))
 
 #+END_SRC
+
+* Emacs (Evil Mode)
+** Table
+| Command   | Behavior                                | Works in emacs? |
+|-----------+-----------------------------------------+-----------------|
+| =C-z=     | Toggle Emacs state (important!)         | No              |
+| =C-h f=   | Describe function (=describe-function=) | Yes             |
+| =C-w C-o= | Switch to other window                  | Yes             |
+| =C-x C-e= | Evaluate last s-expression              | Yes             |
+** Notes
+*** Interactive Mode
+Tip from [[https://www.gnu.org/software/emacs/manual/pdf/eintr.pdf][Intro to Emacs Lisp]]: When creating an interactive function (which is designed to have side-effects), evaluating the function with =C-x C-e= doesn't print anything in the message window. To get around this, you can use the *message* function to print something to the screen.
