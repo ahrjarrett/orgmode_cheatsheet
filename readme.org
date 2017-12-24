@@ -12,7 +12,7 @@ At any point from within Spacemacs you can access the help menu for your current
 
 At any point, from within Spacemacs, you can access “An Introduction to Programming in Emacs Lisp” by hitting =C-h i=.
 
-Resouce: [[https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_cheat_sheet_compact_1-1.pdf][Other Spacemacs Org-Mode Cheatsheet]]
+Resource: [[https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_cheat_sheet_compact_1-1.pdf][Other Spacemacs Org-Mode Cheatsheet]]
 
 ** Spacemacs General Cheatsheet
 
@@ -508,12 +508,18 @@ you should place your code here."
 
 * Emacs (Evil Mode)
 ** Table
-| Command   | Behavior                                | Works in emacs? |
-|-----------+-----------------------------------------+-----------------|
-| =C-z=     | Toggle Emacs state (important!)         | No              |
-| =C-h f=   | Describe function (=describe-function=) | Yes             |
-| =C-w C-o= | Switch to other window                  | Yes             |
-| =C-x C-e= | Evaluate last s-expression              | Yes             |
+| Command       | Behavior                                           | Native in emacs? |
+|---------------+----------------------------------------------------+------------------|
+| =C-z=         | Toggle Emacs state (important!)                    | No               |
+| =C-h f=       | Describe function (=describe-function=)            | Yes              |
+| =C-w C-o=     | Switch to other window                             | Yes              |
+| =C-x C-e=     | Evaluate last s-expression                         | Yes              |
+| =C-u C-x C-e= | Evaluates and prints last s-expression             | Yes              |
+| =C-x 0=       | Kill current windoe                                | Yes              |
+| =C-x 1=       | Make current window, the only window (hide others) | Yes (I think)    |
+| =C-x o=       | Switch to other window                             | Yes              |
+
+
 ** Notes
 *** Interactive Mode
 Tip from [[https://www.gnu.org/software/emacs/manual/pdf/eintr.pdf][Intro to Emacs Lisp]]: When creating an interactive function (which is designed to have side-effects), evaluating the function with =C-x C-e= doesn't print anything in the message window. To get around this, you can use the *message* function to print something to the screen.
