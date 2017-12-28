@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-12-20 Wed 00:56 -->
+<!-- 2017-12-28 Thu 12:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Spacemacs Org-Mode Cheatsheet</title>
@@ -234,34 +234,51 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org192a441">1. Emacs Manual (DocView)</a></li>
-<li><a href="#orgdf0f215">2. Spacemacs Cheatsheet</a>
+<li><a href="#org6cf3ddc">1. Spacemacs Cheatsheet</a>
 <ul>
-<li><a href="#org17809cb">2.1. Spacemacs General Cheatsheet</a></li>
-<li><a href="#org803c6a6">2.2. Working With Text:</a></li>
+<li><a href="#org1e46607">1.1. Spacemacs General Cheatsheet</a></li>
+<li><a href="#orge5eacc9">1.2. Working With Text:</a></li>
 </ul>
 </li>
-<li><a href="#org51f26ea">3. Org Mode</a>
+<li><a href="#org48dec5d">2. Org Mode</a>
 <ul>
-<li><a href="#org797946d">3.1. Org-Mode Command Cheatsheet</a>
+<li><a href="#org5539906">2.1. Org-Mode Command Cheatsheet</a>
 <ul>
-<li><a href="#orga778bfb">3.1.1. Todos</a></li>
+<li><a href="#orgd60d17b">2.1.1. Todos</a></li>
 </ul>
 </li>
-<li><a href="#orgf36bf2d">3.2. Org Capture</a></li>
+<li><a href="#orgc391dee">2.2. Org Capture</a></li>
 </ul>
 </li>
-<li><a href="#orgc3886ae">4. Emacs Lisp</a>
+<li><a href="#orgc72e8ea">3. Emacs Manual (DocView)</a></li>
+<li><a href="#orgae6baef">4. Emacs Lisp</a>
 <ul>
-<li><a href="#org45ee5cf">4.1. Major Mode: Emacs Lisp</a></li>
+<li><a href="#orgc268079">4.1. Major Mode: Emacs Lisp</a></li>
+<li><a href="#org50c0a40">4.2. Major Mode: Lisp Interactive Mode</a></li>
 </ul>
 </li>
-<li><a href="#org9f18272">5. Ivy</a>
+<li><a href="#org9bdbbcb">5. Ivy</a>
 <ul>
-<li><a href="#orge211886">5.1. Spacemacs Ivy Cheatsheet (Lightweight alternative to HELM)</a></li>
+<li><a href="#orgb4af60e">5.1. Spacemacs Ivy Cheatsheet (Lightweight alternative to HELM)</a></li>
 </ul>
 </li>
-<li><a href="#org108b2b7">6. Source Code</a></li>
+<li><a href="#org61ceff0">6. Source Code</a></li>
+<li><a href="#org345c76b">7. Emacs (Evil Mode)</a>
+<ul>
+<li><a href="#org5703169">7.1. Table</a></li>
+<li><a href="#orgc426d25">7.2. Notes</a>
+<ul>
+<li><a href="#org507c358">7.2.1. Interactive Mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgf8a668b">8. Clojure/ClojureScript</a>
+<ul>
+<li><a href="#orgb77b1f7">8.1. Inf-Clojure Mode</a></li>
+<li><a href="#orga9fcd35">8.2. CIDER</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -277,72 +294,21 @@ These are the keybindings that I find useful from within Spacemacs, assuming evi
 At any point from within Spacemacs you can access the help menu for your current major mode/layer by hitting `C-h i`. Appropriately, the first section is about navigating the manual itself, which isn’t exactly straightforward given the sometimes odd combination of keybindings between the two (Vim and Emacs).
 </p>
 
-<div id="outline-container-org192a441" class="outline-2">
-<h2 id="org192a441"><span class="section-number-2">1</span> Emacs Manual (DocView)</h2>
+<div id="outline-container-org6cf3ddc" class="outline-2">
+<h2 id="org6cf3ddc"><span class="section-number-2">1</span> Spacemacs Cheatsheet</h2>
 <div class="outline-text-2" id="text-1">
-<p>
-<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/DocView-Navigation.html">DocView Navigation Resource</a>
-</p>
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Command</th>
-<th scope="col" class="org-left">Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left"><code>n</code></td>
-<td class="org-left">doc-view-next-page</td>
-</tr>
-
-<tr>
-<td class="org-left"><code>p</code></td>
-<td class="org-left">Previous page</td>
-</tr>
-
-<tr>
-<td class="org-left"><code>&lt;</code></td>
-<td class="org-left">doc-view-first-page</td>
-</tr>
-
-<tr>
-<td class="org-left">???</td>
-<td class="org-left">doc-view-last-page (<code>&gt;</code> doesn’t seem to work)</td>
-</tr>
-
-<tr>
-<td class="org-left"><code>g</code></td>
-<td class="org-left">doc-view-goto-page</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div id="outline-container-orgdf0f215" class="outline-2">
-<h2 id="orgdf0f215"><span class="section-number-2">2</span> Spacemacs Cheatsheet</h2>
-<div class="outline-text-2" id="text-2">
 <p>
 At any point, from within Spacemacs, you can access “An Introduction to Programming in Emacs Lisp” by hitting <code>C-h i</code>.
 </p>
 
 <p>
-Resouce: <a href="https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_cheat_sheet_compact_1-1.pdf">Other Spacemacs Org-Mode Cheatsheet</a>
+Resource: <a href="https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_cheat_sheet_compact_1-1.pdf">Other Spacemacs Org-Mode Cheatsheet</a>
 </p>
 </div>
 
-<div id="outline-container-org17809cb" class="outline-3">
-<h3 id="org17809cb"><span class="section-number-3">2.1</span> Spacemacs General Cheatsheet</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org1e46607" class="outline-3">
+<h3 id="org1e46607"><span class="section-number-3">1.1</span> Spacemacs General Cheatsheet</h3>
+<div class="outline-text-3" id="text-1-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -377,9 +343,9 @@ Resouce: <a href="https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_
 </div>
 </div>
 
-<div id="outline-container-org803c6a6" class="outline-3">
-<h3 id="org803c6a6"><span class="section-number-3">2.2</span> Working With Text:</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-orge5eacc9" class="outline-3">
+<h3 id="orge5eacc9"><span class="section-number-3">1.2</span> Working With Text:</h3>
+<div class="outline-text-3" id="text-1-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -402,17 +368,17 @@ Resouce: <a href="https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_
 </div>
 </div>
 
-<div id="outline-container-org51f26ea" class="outline-2">
-<h2 id="org51f26ea"><span class="section-number-2">3</span> Org Mode</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org48dec5d" class="outline-2">
+<h2 id="org48dec5d"><span class="section-number-2">2</span> Org Mode</h2>
+<div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org797946d" class="outline-3">
-<h3 id="org797946d"><span class="section-number-3">3.1</span> Org-Mode Command Cheatsheet</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org5539906" class="outline-3">
+<h3 id="org5539906"><span class="section-number-3">2.1</span> Org-Mode Command Cheatsheet</h3>
+<div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orga778bfb" class="outline-4">
-<h4 id="orga778bfb"><span class="section-number-4">3.1.1</span> Todos</h4>
-<div class="outline-text-4" id="text-3-1-1">
+<div id="outline-container-orgd60d17b" class="outline-4">
+<h4 id="orgd60d17b"><span class="section-number-4">2.1.1</span> Todos</h4>
+<div class="outline-text-4" id="text-2-1-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -584,9 +550,9 @@ Resouce: <a href="https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_
 </div>
 </div>
 
-<div id="outline-container-orgf36bf2d" class="outline-3">
-<h3 id="orgf36bf2d"><span class="section-number-3">3.2</span> Org Capture</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-orgc391dee" class="outline-3">
+<h3 id="orgc391dee"><span class="section-number-3">2.2</span> Org Capture</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
 Org capture is a study unto itself. <a href="http://cestlaz.github.io/posts/using-emacs-23-capture-1/#.WiY5ILQ-fOQ">Here’s a great blog post on the subject</a>.
 </p>
@@ -595,9 +561,9 @@ Org capture is a study unto itself. <a href="http://cestlaz.github.io/posts/usin
 <b>Shortcut:</b> Todo Items are prepended as nodes to “Todo Items” tree automatically with <code>org-capture t</code>, which is currently bound as <code>SPC C c</code>, then <code>t</code> for “Todo Item”. Done forget to add this snipped to your Spacemacs file for it to work:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">'<span style="color: #707183;">(</span><span style="color: #7388D6;">(</span><span style="color: #008000;">"t"</span> <span style="color: #008000;">"Todo Item"</span> entry
-    <span style="color: #909183;">(</span>file+headline <span style="color: #008000;">"~/Desktop/stuff/org/TODOs.org"</span> <span style="color: #008000;">"Todo Items"</span><span style="color: #909183;">)</span>
-    <span style="color: #008000;">"* %?\n%T"</span> <span style="color: #006FE0;">:prepend</span> t<span style="color: #7388D6;">)</span><span style="color: #707183;">)</span>
+<pre class="src src-emacs-lisp">'((<span style="color: #3e999f;">"t"</span> <span style="color: #3e999f;">"Todo Item"</span> entry
+    (file+headline <span style="color: #3e999f;">"~/Desktop/stuff/org/TODOs.org"</span> <span style="color: #3e999f;">"Todo Items"</span>)
+    <span style="color: #3e999f;">"* %?\n%T"</span> <span style="color: #8959a8;">:prepend</span> t))
 </pre>
 </div>
 
@@ -621,12 +587,63 @@ I feel like that last part is key.
 </div>
 </div>
 </div>
-<div id="outline-container-orgc3886ae" class="outline-2">
-<h2 id="orgc3886ae"><span class="section-number-2">4</span> Emacs Lisp</h2>
+<div id="outline-container-orgc72e8ea" class="outline-2">
+<h2 id="orgc72e8ea"><span class="section-number-2">3</span> Emacs Manual (DocView)</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/DocView-Navigation.html">DocView Navigation Resource</a>
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>n</code></td>
+<td class="org-left">doc-view-next-page</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>p</code></td>
+<td class="org-left">Previous page</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>&lt;</code></td>
+<td class="org-left">doc-view-first-page</td>
+</tr>
+
+<tr>
+<td class="org-left">???</td>
+<td class="org-left">doc-view-last-page (<code>&gt;</code> doesn’t seem to work)</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>g</code></td>
+<td class="org-left">doc-view-goto-page</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgae6baef" class="outline-2">
+<h2 id="orgae6baef"><span class="section-number-2">4</span> Emacs Lisp</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org45ee5cf" class="outline-3">
-<h3 id="org45ee5cf"><span class="section-number-3">4.1</span> Major Mode: Emacs Lisp</h3>
+<div id="outline-container-orgc268079" class="outline-3">
+<h3 id="orgc268079"><span class="section-number-3">4.1</span> Major Mode: Emacs Lisp</h3>
 <div class="outline-text-3" id="text-4-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -667,14 +684,57 @@ I feel like that last part is key.
 </table>
 </div>
 </div>
+
+<div id="outline-container-org50c0a40" class="outline-3">
+<h3 id="org50c0a40"><span class="section-number-3">4.2</span> Major Mode: Lisp Interactive Mode</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+This mode is useful for learning Emacs LISP because it allows you to, from within the scratch buffer, evaluate elisp. The following chart assumes the context of the scratch buffer, from within <code>lisp-interaction-mode</code>.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Behavior</th>
+<th scope="col" class="org-left">Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>M-x lisp-interaction-mode</code></td>
+<td class="org-left">Enter LISP Interactive major mode</td>
+<td class="org-left">Scratch buffer, possibly elsewhere?</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-j</code></td>
+<td class="org-left"><i>eval-print-last-sexp</i> at point</td>
+<td class="org-left">LISP Interactive</td>
+</tr>
+</tbody>
+</table>
+<p>
+See also the documenatation on <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Interaction.html">Lisp Interaction buffers</a>.
+</p>
+</div>
+</div>
 </div>
 
-<div id="outline-container-org9f18272" class="outline-2">
-<h2 id="org9f18272"><span class="section-number-2">5</span> Ivy</h2>
+<div id="outline-container-org9bdbbcb" class="outline-2">
+<h2 id="org9bdbbcb"><span class="section-number-2">5</span> Ivy</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-orge211886" class="outline-3">
-<h3 id="orge211886"><span class="section-number-3">5.1</span> Spacemacs Ivy Cheatsheet <a href="http://develop.spacemacs.org/layers/+completion/ivy/README.html">(Lightweight alternative to HELM)</a></h3>
+<div id="outline-container-orgb4af60e" class="outline-3">
+<h3 id="orgb4af60e"><span class="section-number-3">5.1</span> Spacemacs Ivy Cheatsheet <a href="http://develop.spacemacs.org/layers/+completion/ivy/README.html">(Lightweight alternative to HELM)</a></h3>
 <div class="outline-text-3" id="text-5-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -698,407 +758,217 @@ I feel like that last part is key.
 </div>
 </div>
 
-<div id="outline-container-org108b2b7" class="outline-2">
-<h2 id="org108b2b7"><span class="section-number-2">6</span> Source Code</h2>
+<div id="outline-container-org61ceff0" class="outline-2">
+<h2 id="org61ceff0"><span class="section-number-2">6</span> Source Code</h2>
 <div class="outline-text-2" id="text-6">
 <div class="org-src-container">
 <pre class="src src-javascript">
-<span style="color: #8D8D84;">/* </span><span style="color: #8D8D84; font-style: italic;">how does this format in the browser?</span>
-<span style="color: #8D8D84; font-style: italic;">  * is this rendered like ``` blocks in github flavored markdown? */</span>
+<span style="color: #8e908c; font-style: italic;">/* </span><span style="color: #8e908c; font-style: italic;">how does this format in the browser?</span>
+<span style="color: #8e908c; font-style: italic;">  * is this rendered like ``` blocks in github flavored markdown? */</span>
 
-<span style="color: #8D8D84;">// </span><span style="color: #8D8D84; font-style: italic;">single line comment</span>
+<span style="color: #8e908c; font-style: italic;">// </span><span style="color: #8e908c; font-style: italic;">single line comment</span>
 
-<span style="color: #0000FF;">const</span> <span style="color: #BA36A5;">myConstant</span> = <span style="color: #008000;">'this is my constant'</span>
+<span style="color: #718c00;">const</span> <span style="color: #eab700;">myConstant</span> = <span style="color: #3e999f;">'this is my constant'</span>
 
-<span style="color: #8D8D84;">// </span><span style="color: #8D8D84; font-style: italic;">not tail-recursive tho</span>
-<span style="color: #0000FF;">function</span> <span style="color: #006699;">factorial</span><span style="color: #707183;">(</span><span style="color: #BA36A5;">n</span><span style="color: #707183;">)</span> <span style="color: #707183;">{</span>
-  <span style="color: #0000FF;">if</span><span style="color: #7388D6;">(</span>n === <span style="color: #D0372D;">1</span><span style="color: #7388D6;">)</span> <span style="color: #0000FF;">return</span> n
-  <span style="color: #0000FF;">return</span> n * factorial<span style="color: #7388D6;">(</span>n-<span style="color: #D0372D;">1</span><span style="color: #7388D6;">)</span>
-<span style="color: #707183;">}</span>
+<span style="color: #8e908c; font-style: italic;">// </span><span style="color: #8e908c; font-style: italic;">not tail-recursive tho</span>
+<span style="color: #718c00;">function</span> <span style="color: #f5871f;">factorial</span>(<span style="color: #eab700;">n</span>) {
+  <span style="color: #718c00;">if</span>(n === 1) <span style="color: #718c00;">return</span> n
+  <span style="color: #718c00;">return</span> n * factorial(n-1)
+}
 
-<span style="color: #0000FF;">let</span> <span style="color: #BA36A5;">a</span> = Array.<span style="color: #D0372D;">prototype</span>
+<span style="color: #718c00;">let</span> <span style="color: #eab700;">a</span> = Array.<span style="color: #4271ae;">prototype</span>
 
-console.log<span style="color: #707183;">(</span>a<span style="color: #707183;">)</span> <span style="color: #8D8D84;">// </span><span style="color: #8D8D84; font-style: italic;">[constructor: &#402;, concat: &#402;, pop: &#402;, push: &#402;, shift: &#402;,&#160;&#8230;]</span>
+console.log(a) <span style="color: #8e908c; font-style: italic;">// </span><span style="color: #8e908c; font-style: italic;">[constructor: &#402;, concat: &#402;, pop: &#402;, push: &#402;, shift: &#402;,&#160;&#8230;]</span>
 
-factorial<span style="color: #707183;">(</span><span style="color: #D0372D;">5</span><span style="color: #707183;">)</span>
+factorial(5)
 </pre>
 </div>
+</div>
+</div>
+
+<div id="outline-container-org345c76b" class="outline-2">
+<h2 id="org345c76b"><span class="section-number-2">7</span> Emacs (Evil Mode)</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org5703169" class="outline-3">
+<h3 id="org5703169"><span class="section-number-3">7.1</span> Table</h3>
+<div class="outline-text-3" id="text-7-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Behavior</th>
+<th scope="col" class="org-left">Native in emacs?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>C-z</code></td>
+<td class="org-left">Toggle Emacs state (important!)</td>
+<td class="org-left">No</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-h f</code></td>
+<td class="org-left">Describe function (<code>describe-function</code>)</td>
+<td class="org-left">Yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-w C-o</code></td>
+<td class="org-left">Switch to other window</td>
+<td class="org-left">Yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x C-e</code></td>
+<td class="org-left">Evaluate last s-expression</td>
+<td class="org-left">Yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-u C-x C-e</code></td>
+<td class="org-left">Evaluates and prints last s-expression</td>
+<td class="org-left">Yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x 0</code></td>
+<td class="org-left">Kill current windoe</td>
+<td class="org-left">Yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x 1</code></td>
+<td class="org-left">Make current window, the only window (hide others)</td>
+<td class="org-left">Yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-x o</code></td>
+<td class="org-left">Switch to other window</td>
+<td class="org-left">Yes</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-h m</code></td>
+<td class="org-left">See enabled minor modes (and list of commands)</td>
+<td class="org-left">Yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgc426d25" class="outline-3">
+<h3 id="orgc426d25"><span class="section-number-3">7.2</span> Notes</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-org507c358" class="outline-4">
+<h4 id="org507c358"><span class="section-number-4">7.2.1</span> Interactive Mode</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<p>
+Tip from <a href="https://www.gnu.org/software/emacs/manual/pdf/eintr.pdf">Intro to Emacs Lisp</a>: When creating an interactive function (which is designed to have side-effects), evaluating the function with <code>C-x C-e</code> doesn't print anything in the message window. To get around this, you can use the <b>message</b> function to print something to the screen.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf8a668b" class="outline-2">
+<h2 id="orgf8a668b"><span class="section-number-2">8</span> Clojure/ClojureScript</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orgb77b1f7" class="outline-3">
+<h3 id="orgb77b1f7"><span class="section-number-3">8.1</span> Inf-Clojure Mode</h3>
+<div class="outline-text-3" id="text-8-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>M-x lisp-eval-last-sexp</code></td>
+<td class="org-left">sends last s-expression to inferior lisp REPL (works w/ CIDER? test this)</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>M-x inf-clojure-minor-mode</code></td>
+<td class="org-left">adds relevant keybindings for this mode (consider adding to emacs config**</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>C-c C-s</code></td>
+<td class="org-left">view source code for function under point (only in inf-clojure mode)</td>
+</tr>
+</tbody>
+</table>
 
 <p>
-My first attempt at rewriting my <code>.spacemacs</code> file, to see emacs-lisp rendered (and to have a really old backup in case github goes down):
+**This is the hook you would add, if you wanted to turn on inferior-clojure mode automatically while working with ClojureScript files:
 </p>
 
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">
-<span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">-*- mode: emacs-lisp -*-</span>
-<span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">This file is loaded by Spacemacs at startup.</span>
-<span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">It must be stored in your home directory.</span>
+<p>
+<b>NOTE: just make sure you disable CIDER if you decide to go with inf-clojure!</b>
+</p>
+</div>
+</div>
 
-<span style="color: #707183;">(</span><span style="color: #0000FF;">defun</span> <span style="color: #006699;">dotspacemacs/layers</span> <span style="color: #7388D6;">()</span>
-  <span style="color: #036A07;">"Configuration Layers declaration.</span>
-<span style="color: #036A07;">You should not put any user code in this function besides modifying the variable</span>
-<span style="color: #036A07;">values."</span>
-  <span style="color: #7388D6;">(</span><span style="color: #0000FF;">setq-default</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Custom config:</span>
-   js2-basic-offset <span style="color: #D0372D;">2</span>
-   js-indent-level <span style="color: #D0372D;">2</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Base distribution to use. This is a layer contained in the directory</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">+distribution</span><span style="color: #8D8D84; font-style: italic;">'. For now available distributions are `</span><span style="color: #D0372D; font-style: italic;">spacemacs-base</span><span style="color: #8D8D84; font-style: italic;">'</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">or `</span><span style="color: #D0372D; font-style: italic;">spacemacs</span><span style="color: #8D8D84; font-style: italic;">'. (default 'spacemacs)</span>
-   dotspacemacs-distribution 'spacemacs
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Lazy installation of layers (i.e. layers are installed only when a file</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">with a supported type is opened). Possible values are `</span><span style="color: #D0372D; font-style: italic;">all</span><span style="color: #8D8D84; font-style: italic;">', `</span><span style="color: #D0372D; font-style: italic;">unused</span><span style="color: #8D8D84; font-style: italic;">'</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">and `</span><span style="color: #D0372D; font-style: italic;">nil</span><span style="color: #8D8D84; font-style: italic;">'. `</span><span style="color: #D0372D; font-style: italic;">unused</span><span style="color: #8D8D84; font-style: italic;">' will lazy install only unused layers (i.e. layers</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">not listed in variable `</span><span style="color: #D0372D; font-style: italic;">dotspacemacs-configuration-layers</span><span style="color: #8D8D84; font-style: italic;">'), `</span><span style="color: #D0372D; font-style: italic;">all</span><span style="color: #8D8D84; font-style: italic;">' will</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">lazy install any layer that support lazy installation even the layers</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">listed in `</span><span style="color: #D0372D; font-style: italic;">dotspacemacs-configuration-layers</span><span style="color: #8D8D84; font-style: italic;">'. `</span><span style="color: #D0372D; font-style: italic;">nil</span><span style="color: #8D8D84; font-style: italic;">' disable the lazy</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">installation feature and you have to explicitly list a layer in the</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">variable `</span><span style="color: #D0372D; font-style: italic;">dotspacemacs-configuration-layers</span><span style="color: #8D8D84; font-style: italic;">' to install it.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default 'unused)</span>
-   dotspacemacs-enable-lazy-installation 'unused
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non-nil then Spacemacs will ask for confirmation before installing</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">a layer lazily. (default t)</span>
-   dotspacemacs-ask-for-lazy-installation t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non-nil layers with lazy install support are lazy installed.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">List of additional paths where to look for configuration layers.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Paths must have a trailing slash (i.e. `</span><span style="color: #D0372D; font-style: italic;">~/.mycontribs/</span><span style="color: #8D8D84; font-style: italic;">')</span>
-   dotspacemacs-configuration-layer-path '<span style="color: #909183;">()</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">List of configuration layers to load.</span>
-   dotspacemacs-configuration-layers
-   '<span style="color: #909183;">(</span>
-     javascript
-     html
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">----------------------------------------------------------------</span>
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Example of useful layers you may want to use right away.</span>
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Uncomment some layer names and press &lt;SPC f e R&gt; (Vim style) or</span>
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">&lt;M-m f e R&gt; (Emacs style) to install them.</span>
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">----------------------------------------------------------------</span>
-     helm
-     auto-completion
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">better-defaults</span>
-     <span style="color: #709870;">(</span>colors <span style="color: #006FE0;">:variables</span><span style="color: #709870;">)</span>
-     clojure
-     emacs-lisp
-     git
-     markdown
-     org
-     <span style="color: #709870;">(</span>org <span style="color: #006FE0;">:variables</span>
-          org-enable-bootstrap-support t
-          org-enable-reveal-js-support t<span style="color: #709870;">)</span>
-     scheme
-     <span style="color: #709870;">(</span>shell <span style="color: #006FE0;">:variables</span>
-            shell-default-height <span style="color: #D0372D;">30</span>
-            shell-default-position 'bottom<span style="color: #709870;">)</span>
-     themes-megapack
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">spell-checking</span>
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">syntax-checking</span>
-     <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">version-control</span>
-     <span style="color: #909183;">)</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">List of additional packages that will be installed without being</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">wrapped in a layer. If you need some configuration for these</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">packages, then consider creating a layer. You can also put the</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">configuration in `</span><span style="color: #D0372D; font-style: italic;">dotspacemacs/user-config</span><span style="color: #8D8D84; font-style: italic;">'.</span>
-   dotspacemacs-additional-packages '<span style="color: #909183;">()</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">A list of packages that cannot be updated.</span>
-   dotspacemacs-frozen-packages '<span style="color: #909183;">()</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">A list of packages that will not be installed and loaded.</span>
-   dotspacemacs-excluded-packages '<span style="color: #909183;">()</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Defines the behaviour of Spacemacs when installing packages.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Possible values are `</span><span style="color: #D0372D; font-style: italic;">used-only</span><span style="color: #8D8D84; font-style: italic;">', `</span><span style="color: #D0372D; font-style: italic;">used-but-keep-unused</span><span style="color: #8D8D84; font-style: italic;">' and `</span><span style="color: #D0372D; font-style: italic;">all</span><span style="color: #8D8D84; font-style: italic;">'.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">used-only</span><span style="color: #8D8D84; font-style: italic;">' installs only explicitly used packages and uninstall any</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">unused packages as well as their unused dependencies.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">used-but-keep-unused</span><span style="color: #8D8D84; font-style: italic;">' installs only the used packages but won't uninstall</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">them if they become unused. `</span><span style="color: #D0372D; font-style: italic;">all</span><span style="color: #8D8D84; font-style: italic;">' installs *all* packages supported by</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Spacemacs and never uninstall them. (default is `</span><span style="color: #D0372D; font-style: italic;">used-only</span><span style="color: #8D8D84; font-style: italic;">')</span>
-   dotspacemacs-install-packages 'used-only<span style="color: #7388D6;">)</span><span style="color: #707183;">)</span>
 
-<span style="color: #707183;">(</span><span style="color: #0000FF;">defun</span> <span style="color: #006699;">dotspacemacs/init</span> <span style="color: #7388D6;">()</span>
-  <span style="color: #036A07;">"Initialization function.</span>
-<span style="color: #036A07;">This function is called at the very startup of Spacemacs initialization</span>
-<span style="color: #036A07;">before layers configuration.</span>
-<span style="color: #036A07;">You should not put any user code in there besides modifying the variable</span>
-<span style="color: #036A07;">values."</span>
-  <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">This setq-default sexp is an exhaustive list of all the supported</span>
-  <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">spacemacs settings.</span>
-  <span style="color: #7388D6;">(</span><span style="color: #0000FF;">setq-default</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default t)</span>
-   dotspacemacs-elpa-https t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Maximum allowed time in seconds to contact an ELPA repository.</span>
-   dotspacemacs-elpa-timeout <span style="color: #D0372D;">5</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil then spacemacs will check for updates at startup</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">when the current branch is not `</span><span style="color: #D0372D; font-style: italic;">develop</span><span style="color: #8D8D84; font-style: italic;">'. Note that checking for</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">new versions works via git commands, thus it calls GitHub services</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">whenever you start Emacs. (default nil)</span>
-   dotspacemacs-check-for-update t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non-nil, a form that evaluates to a package directory. For example, to</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">use different package directories for different Emacs versions, set this</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">to `</span><span style="color: #D0372D; font-style: italic;">emacs-version</span><span style="color: #8D8D84; font-style: italic;">'.</span>
-   dotspacemacs-elpa-subdirectory nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">One of `</span><span style="color: #D0372D; font-style: italic;">vim</span><span style="color: #8D8D84; font-style: italic;">', `</span><span style="color: #D0372D; font-style: italic;">emacs</span><span style="color: #8D8D84; font-style: italic;">' or `</span><span style="color: #D0372D; font-style: italic;">hybrid</span><span style="color: #8D8D84; font-style: italic;">'.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">hybrid</span><span style="color: #8D8D84; font-style: italic;">' is like `</span><span style="color: #D0372D; font-style: italic;">vim</span><span style="color: #8D8D84; font-style: italic;">' except that `insert state' is replaced by the</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`hybrid state' with `</span><span style="color: #D0372D; font-style: italic;">emacs</span><span style="color: #8D8D84; font-style: italic;">' key bindings. The value can also be a list</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">with `</span><span style="color: #D0372D; font-style: italic;">:variables</span><span style="color: #8D8D84; font-style: italic;">' keyword (similar to layers). Check the editing styles</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">section of the documentation for details on available variables.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default 'vim)</span>
-   dotspacemacs-editing-style 'vim
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil output loading progress in `</span><span style="color: #D0372D; font-style: italic;">*Messages*</span><span style="color: #8D8D84; font-style: italic;">' buffer. (default nil)</span>
-   dotspacemacs-verbose-loading nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Specify the startup banner. Default value is `</span><span style="color: #D0372D; font-style: italic;">official</span><span style="color: #8D8D84; font-style: italic;">', it displays</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">the official spacemacs logo. An integer value is the index of text</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">banner, `</span><span style="color: #D0372D; font-style: italic;">random</span><span style="color: #8D8D84; font-style: italic;">' chooses a random text banner in `</span><span style="color: #D0372D; font-style: italic;">core/banners</span><span style="color: #8D8D84; font-style: italic;">'</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">directory. A string value must be a path to an image format supported</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">by your Emacs build.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If the value is nil then no banner is displayed. (default 'official)</span>
-   dotspacemacs-startup-banner 'random
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">List of items to show in startup buffer or an association list of</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">the form `(list-type . list-size)`. If nil then it is disabled.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Possible values for list-type are:</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">recents</span><span style="color: #8D8D84; font-style: italic;">' `</span><span style="color: #D0372D; font-style: italic;">bookmarks</span><span style="color: #8D8D84; font-style: italic;">' `</span><span style="color: #D0372D; font-style: italic;">projects</span><span style="color: #8D8D84; font-style: italic;">' `</span><span style="color: #D0372D; font-style: italic;">agenda</span><span style="color: #8D8D84; font-style: italic;">' `</span><span style="color: #D0372D; font-style: italic;">todos</span><span style="color: #8D8D84; font-style: italic;">'."</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">List sizes may be nil, in which case</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">spacemacs-buffer-startup-lists-length</span><span style="color: #8D8D84; font-style: italic;">' takes effect.</span>
-   dotspacemacs-startup-lists '<span style="color: #909183;">(</span><span style="color: #709870;">(</span>recents . <span style="color: #D0372D;">5</span><span style="color: #709870;">)</span>
-                                <span style="color: #709870;">(</span>projects . <span style="color: #D0372D;">7</span><span style="color: #709870;">)</span><span style="color: #909183;">)</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">True if the home buffer should respond to resize events.</span>
-   dotspacemacs-startup-buffer-responsive t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Default major mode of the scratch buffer (default `</span><span style="color: #D0372D; font-style: italic;">text-mode</span><span style="color: #8D8D84; font-style: italic;">')</span>
-   dotspacemacs-scratch-mode 'org-mode
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">List of themes, the first of the list is loaded when spacemacs starts.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Press &lt;SPC&gt; T n to cycle to the next theme in the list (works great</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">with 2 themes variants, one dark and one light)</span>
-   dotspacemacs-themes '<span style="color: #909183;">(</span>hc-zenburn
-                         leuven
-                         material
-                         <span style="color: #8D8D84;">;;</span><span style="color: #8D8D84; font-style: italic;">spacemacs-dark</span>
-                         <span style="color: #8D8D84;">;;</span><span style="color: #8D8D84; font-style: italic;">spacemacs-light</span>
-                        <span style="color: #909183;">)</span>
+<div id="outline-container-orga9fcd35" class="outline-3">
+<h3 id="orga9fcd35"><span class="section-number-3">8.2</span> CIDER</h3>
+<div class="outline-text-3" id="text-8-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil the cursor color matches the state color in GUI Emacs.</span>
-   dotspacemacs-colorize-cursor-according-to-state t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Default font, or prioritized list of fonts. `</span><span style="color: #D0372D; font-style: italic;">powerline-scale</span><span style="color: #8D8D84; font-style: italic;">' allows to</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">quickly tweak the mode-line size to make separators look not too crappy.</span>
-   dotspacemacs-default-font '<span style="color: #909183;">(</span><span style="color: #008000;">"mononoki"</span>
-                               <span style="color: #006FE0;">:size</span> <span style="color: #D0372D;">16</span>
-                               <span style="color: #006FE0;">:weight</span> normal
-                               <span style="color: #006FE0;">:width</span> normal
-                               <span style="color: #006FE0;">:powerline-scale</span> <span style="color: #D0372D;">1.2</span><span style="color: #909183;">)</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">The leader key</span>
-   dotspacemacs-leader-key <span style="color: #008000;">"SPC"</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">The key used for Emacs commands (M-x) (after pressing on the leader key).</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default "SPC")</span>
-   dotspacemacs-emacs-command-key <span style="color: #008000;">"SPC"</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">The key used for Vim Ex commands (default ":")</span>
-   dotspacemacs-ex-command-key <span style="color: #008000;">":"</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">The leader key accessible in `emacs state' and `insert state'</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default "M-m")</span>
-   dotspacemacs-emacs-leader-key <span style="color: #008000;">"M-m"</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Major mode leader key is a shortcut key which is the equivalent of</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">pressing `&lt;leader&gt; m`. Set it to `nil` to disable it. (default ",")</span>
-   dotspacemacs-major-mode-leader-key <span style="color: #008000;">","</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Major mode leader key accessible in `emacs state' and `insert state'.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default "C-M-m")</span>
-   dotspacemacs-major-mode-emacs-leader-key <span style="color: #008000;">"C-M-m"</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">These variables control whether separate commands are bound in the GUI to</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">the key pairs C-i, TAB and C-m, RET.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Setting it to a non-nil value, allows for separate commands under &lt;C-i&gt;</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">and TAB or &lt;C-m&gt; and RET.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">In the terminal, these pairs are generally indistinguishable, so this only</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">works in the GUI. (default nil)</span>
-   dotspacemacs-distinguish-gui-tab nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil `Y' is remapped to `</span><span style="color: #D0372D; font-style: italic;">y$</span><span style="color: #8D8D84; font-style: italic;">' in Evil states. (default nil)</span>
-   dotspacemacs-remap-Y-to-y$ nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non-nil, the shift mappings `&lt;' and `&gt;' retain visual state if used</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">there. (default t)</span>
-   dotspacemacs-retain-visual-state-on-shift t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non-nil, J and K move lines up and down when in visual mode.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil)</span>
-   dotspacemacs-visual-line-move-text nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil, inverse the meaning of `g' in `</span><span style="color: #D0372D; font-style: italic;">:substitute</span><span style="color: #8D8D84; font-style: italic;">' Evil ex-command.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil)</span>
-   dotspacemacs-ex-substitute-global nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Name of the default layout (default "Default")</span>
-   dotspacemacs-default-layout-name <span style="color: #008000;">"Default"</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil the default layout name is displayed in the mode-line.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil)</span>
-   dotspacemacs-display-default-layout nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil then the last auto saved layouts are resume automatically upon</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">start. (default nil)</span>
-   dotspacemacs-auto-resume-layouts nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Size (in MB) above which spacemacs will prompt to open the large file</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">literally to avoid performance issues. Opening a file literally means that</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">no major mode or minor modes are active. (default is 1)</span>
-   dotspacemacs-large-file-size <span style="color: #D0372D;">1</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Location where to auto-save files. Possible values are `</span><span style="color: #D0372D; font-style: italic;">original</span><span style="color: #8D8D84; font-style: italic;">' to</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">auto-save the file in-place, `</span><span style="color: #D0372D; font-style: italic;">cache</span><span style="color: #8D8D84; font-style: italic;">' to auto-save the file to another</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">file stored in the cache directory and `</span><span style="color: #D0372D; font-style: italic;">nil</span><span style="color: #8D8D84; font-style: italic;">' to disable auto-saving.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default 'cache)</span>
-   dotspacemacs-auto-save-file-location 'cache
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Maximum number of rollback slots to keep in the cache. (default 5)</span>
-   dotspacemacs-max-rollback-slots <span style="color: #D0372D;">5</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil, `</span><span style="color: #D0372D; font-style: italic;">helm</span><span style="color: #8D8D84; font-style: italic;">' will try to minimize the space it uses. (default nil)</span>
-   dotspacemacs-helm-resize nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">if non nil, the helm header is hidden when there is only one source.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil)</span>
-   dotspacemacs-helm-no-header nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">define the position to display `</span><span style="color: #D0372D; font-style: italic;">helm</span><span style="color: #8D8D84; font-style: italic;">', options are `</span><span style="color: #D0372D; font-style: italic;">bottom</span><span style="color: #8D8D84; font-style: italic;">', `</span><span style="color: #D0372D; font-style: italic;">top</span><span style="color: #8D8D84; font-style: italic;">',</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">left</span><span style="color: #8D8D84; font-style: italic;">', or `</span><span style="color: #D0372D; font-style: italic;">right</span><span style="color: #8D8D84; font-style: italic;">'. (default 'bottom)</span>
-   dotspacemacs-helm-position 'bottom
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Controls fuzzy matching in helm. If set to `</span><span style="color: #D0372D; font-style: italic;">always</span><span style="color: #8D8D84; font-style: italic;">', force fuzzy matching</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">in all non-asynchronous sources. If set to `</span><span style="color: #D0372D; font-style: italic;">source</span><span style="color: #8D8D84; font-style: italic;">', preserve individual</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">source settings. Else, disable fuzzy matching in all sources.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default 'always)</span>
-   dotspacemacs-helm-use-fuzzy 'always
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil the paste micro-state is enabled. When enabled pressing `p`</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">several times cycle between the kill ring content. (default nil)</span>
-   dotspacemacs-enable-paste-transient-state nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Which-key delay in seconds. The which-key buffer is the popup listing</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">the commands bound to the current keystroke sequence. (default 0.4)</span>
-   dotspacemacs-which-key-delay <span style="color: #D0372D;">0.4</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Which-key frame position. Possible values are `</span><span style="color: #D0372D; font-style: italic;">right</span><span style="color: #8D8D84; font-style: italic;">', `</span><span style="color: #D0372D; font-style: italic;">bottom</span><span style="color: #8D8D84; font-style: italic;">' and</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">right-then-bottom</span><span style="color: #8D8D84; font-style: italic;">'. right-then-bottom tries to display the frame to the</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">right; if there is insufficient space it displays it at the bottom.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default 'bottom)</span>
-   dotspacemacs-which-key-position 'bottom
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil a progress bar is displayed when spacemacs is loading. This</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">may increase the boot time on some systems and emacs builds, set it to</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">nil to boost the loading time. (default t)</span>
-   dotspacemacs-loading-progress-bar t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil the frame is fullscreen when Emacs starts up. (default nil)</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(Emacs 24.4+ only)</span>
-   dotspacemacs-fullscreen-at-startup nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil `</span><span style="color: #D0372D; font-style: italic;">spacemacs/toggle-fullscreen</span><span style="color: #8D8D84; font-style: italic;">' will not use native fullscreen.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Use to disable fullscreen animations in OSX. (default nil)</span>
-   dotspacemacs-fullscreen-use-non-native nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil the frame is maximized when Emacs starts up.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Takes effect only if `</span><span style="color: #D0372D; font-style: italic;">dotspacemacs-fullscreen-at-startup</span><span style="color: #8D8D84; font-style: italic;">' is nil.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil) (Emacs 24.4+ only)</span>
-   dotspacemacs-maximized-at-startup nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">A value from the range (0..100), in increasing opacity, which describes</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">the transparency level of a frame when it's active or selected.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Transparency can be toggled through `</span><span style="color: #D0372D; font-style: italic;">toggle-transparency</span><span style="color: #8D8D84; font-style: italic;">'. (default 90)</span>
-   dotspacemacs-active-transparency <span style="color: #D0372D;">90</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">A value from the range (0..100), in increasing opacity, which describes</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">the transparency level of a frame when it's inactive or deselected.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Transparency can be toggled through `</span><span style="color: #D0372D; font-style: italic;">toggle-transparency</span><span style="color: #8D8D84; font-style: italic;">'. (default 90)</span>
-   dotspacemacs-inactive-transparency <span style="color: #D0372D;">80</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil show the titles of transient states. (default t)</span>
-   dotspacemacs-show-transient-state-title t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil show the color guide hint for transient state keys. (default t)</span>
-   dotspacemacs-show-transient-state-color-guide t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil unicode symbols are displayed in the mode line. (default t)</span>
-   dotspacemacs-mode-line-unicode-symbols t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil smooth scrolling (native-scrolling) is enabled. Smooth</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">scrolling overrides the default behavior of Emacs which recenters point</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">when it reaches the top or bottom of the screen. (default t)</span>
-   dotspacemacs-smooth-scrolling t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil line numbers are turned on in all `</span><span style="color: #D0372D; font-style: italic;">prog-mode</span><span style="color: #8D8D84; font-style: italic;">' and `</span><span style="color: #D0372D; font-style: italic;">text-mode</span><span style="color: #8D8D84; font-style: italic;">'</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">derivatives. If set to `</span><span style="color: #D0372D; font-style: italic;">relative</span><span style="color: #8D8D84; font-style: italic;">', also turns on relative line numbers.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil)</span>
-   dotspacemacs-line-numbers nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Code folding method. Possible values are `</span><span style="color: #D0372D; font-style: italic;">evil</span><span style="color: #8D8D84; font-style: italic;">' and `</span><span style="color: #D0372D; font-style: italic;">origami</span><span style="color: #8D8D84; font-style: italic;">'.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default 'evil)</span>
-   dotspacemacs-folding-method 'evil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non-nil smartparens-strict-mode will be enabled in programming modes.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil)</span>
-   dotspacemacs-smartparens-strict-mode t
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non-nil pressing the closing parenthesis `)' key in insert mode passes</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">over any automatically added closing parenthesis, bracket, quote, etc&#8230;</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">This can be temporary disabled by pressing `</span><span style="color: #D0372D; font-style: italic;">C-q</span><span style="color: #8D8D84; font-style: italic;">' before `)'. (default nil)</span>
-   dotspacemacs-smart-closing-parenthesis nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Select a scope to highlight delimiters. Possible values are `</span><span style="color: #D0372D; font-style: italic;">any</span><span style="color: #8D8D84; font-style: italic;">',</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">current</span><span style="color: #8D8D84; font-style: italic;">', `</span><span style="color: #D0372D; font-style: italic;">all</span><span style="color: #8D8D84; font-style: italic;">' or `</span><span style="color: #D0372D; font-style: italic;">nil</span><span style="color: #8D8D84; font-style: italic;">'. Default is `</span><span style="color: #D0372D; font-style: italic;">all</span><span style="color: #8D8D84; font-style: italic;">' (highlight any scope and</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">emphasis the current one). (default 'all)</span>
-   dotspacemacs-highlight-delimiters 'all
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If non nil, advise quit functions to keep server open when quitting.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil)</span>
-   dotspacemacs-persistent-server nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">List of search tool executable names. Spacemacs uses the first installed</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">tool of the list. Supported tools are `</span><span style="color: #D0372D; font-style: italic;">ag</span><span style="color: #8D8D84; font-style: italic;">', `</span><span style="color: #D0372D; font-style: italic;">pt</span><span style="color: #8D8D84; font-style: italic;">', `</span><span style="color: #D0372D; font-style: italic;">ack</span><span style="color: #8D8D84; font-style: italic;">' and `</span><span style="color: #D0372D; font-style: italic;">grep</span><span style="color: #8D8D84; font-style: italic;">'.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default '("ag" "pt" "ack" "grep"))</span>
-   dotspacemacs-search-tools '<span style="color: #909183;">(</span><span style="color: #008000;">"ag"</span> <span style="color: #008000;">"pt"</span> <span style="color: #008000;">"ack"</span> <span style="color: #008000;">"grep"</span><span style="color: #909183;">)</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">The default package repository used if no explicit repository has been</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">specified with an installed package.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Not used for now. (default nil)</span>
-   dotspacemacs-default-package-repository nil
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Delete whitespace while saving buffer. Possible values are `</span><span style="color: #D0372D; font-style: italic;">all</span><span style="color: #8D8D84; font-style: italic;">'</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">to aggressively delete empty line and long sequences of whitespace,</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">`</span><span style="color: #D0372D; font-style: italic;">trailing</span><span style="color: #8D8D84; font-style: italic;">' to delete only the whitespace at end of lines, `</span><span style="color: #D0372D; font-style: italic;">changed</span><span style="color: #8D8D84; font-style: italic;">'to</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">delete only whitespace for changed lines or `</span><span style="color: #D0372D; font-style: italic;">nil</span><span style="color: #8D8D84; font-style: italic;">' to disable cleanup.</span>
-   <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">(default nil)</span>
-   dotspacemacs-whitespace-cleanup 'trailing
-   <span style="color: #7388D6;">)</span><span style="color: #707183;">)</span>
 
-<span style="color: #707183;">(</span><span style="color: #0000FF;">defun</span> <span style="color: #006699;">dotspacemacs/user-init</span> <span style="color: #7388D6;">()</span>
-  <span style="color: #036A07;">"Initialization function for user code.</span>
-<span style="color: #036A07;">It is called immediately after `</span><span style="color: #D0372D;">dotspacemacs/init</span><span style="color: #036A07;">', before layer configuration</span>
-<span style="color: #036A07;">executes.</span>
-<span style="color: #036A07;"> This function is mostly useful for variables that need to be set</span>
-<span style="color: #036A07;">before packages are loaded. If you are unsure, you should try in setting them in</span>
-<span style="color: #036A07;">`</span><span style="color: #D0372D;">dotspacemacs/user-config</span><span style="color: #036A07;">' first."</span>
-  <span style="color: #707183;">)</span>
+<colgroup>
+<col  class="org-left" />
 
-<span style="color: #707183;">(</span><span style="color: #0000FF;">defun</span> <span style="color: #006699;">dotspacemacs/user-config</span> <span style="color: #7388D6;">()</span>
-  <span style="color: #036A07;">"Configuration function for user code.</span>
-<span style="color: #036A07;">This function is called at the very end of Spacemacs initialization after</span>
-<span style="color: #036A07;">layers configuration.</span>
-<span style="color: #036A07;">This is the place where most of your configurations should be done. Unless it is</span>
-<span style="color: #036A07;">explicitly specified that a variable should be set before a package is loaded,</span>
-<span style="color: #036A07;">you should place your code here."</span>
-  <span style="color: #707183;">)</span>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>M-x cider-quit</code></td>
+<td class="org-left">Kill CIDER nREPL and leave cider-mode</td>
+</tr>
 
-<span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Do not write anything past this comment. This is where Emacs will</span>
-<span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">auto-generate custom variable definitions.</span>
-<span style="color: #707183;">(</span>custom-set-variables
- <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">custom-set-variables was added by Custom.</span>
- <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If you edit it by hand, you could mess it up, so be careful.</span>
- <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Your init file should contain only one such instance.</span>
- <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If there is more than one, they won't work right.</span>
- '<span style="color: #7388D6;">(</span>ansi-color-faces-vector
-   <span style="color: #909183;">[</span>default default default italic underline success warning error<span style="color: #909183;">]</span><span style="color: #7388D6;">)</span>
- '<span style="color: #7388D6;">(</span>ansi-color-names-vector
-   <span style="color: #909183;">[</span><span style="color: #008000;">"#0a0814"</span> <span style="color: #008000;">"#f2241f"</span> <span style="color: #008000;">"#67b11d"</span> <span style="color: #008000;">"#b1951d"</span> <span style="color: #008000;">"#4f97d7"</span> <span style="color: #008000;">"#a31db1"</span> <span style="color: #008000;">"#28def0"</span> <span style="color: #008000;">"#b2b2b2"</span><span style="color: #909183;">]</span><span style="color: #7388D6;">)</span>
- '<span style="color: #7388D6;">(</span>evil-want-Y-yank-to-eol nil<span style="color: #7388D6;">)</span>
- '<span style="color: #7388D6;">(</span>fci-rule-color <span style="color: #008000;">"#5E5E5E"</span> t<span style="color: #7388D6;">)</span>
- '<span style="color: #7388D6;">(</span>linum-format <span style="color: #008000;">" %7i "</span><span style="color: #7388D6;">)</span>
- '<span style="color: #7388D6;">(</span>package-selected-packages
-   <span style="color: #909183;">(</span><span style="color: #0000FF;">quote</span>
-    <span style="color: #709870;">(</span>ox-reveal ox-twbs zenburn-theme zen-and-art-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme espresso-theme dracula-theme django-theme darktooth-theme autothemer darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme org-category-capture noflet ensime sbt-mode scala-mode rainbow-mode rainbow-identifiers color-identifiers-mode geiser clojure-snippets clj-refactor inflections edn paredit peg cider-eval-sexp-fu cider seq queue clojure-mode xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-tern dash-functional tern company-statistics company auto-yasnippet ac-ispell auto-complete mmm-mode markdown-toc markdown-mode gh-md winum smeargle orgit org-projectile pcache org-present org org-pomodoro alert log4e gntp org-download magit-gitflow htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme<span style="color: #709870;">)</span><span style="color: #909183;">)</span><span style="color: #7388D6;">)</span>
- '<span style="color: #7388D6;">(</span>vc-annotate-background <span style="color: #008000;">"#202020"</span><span style="color: #7388D6;">)</span>
- '<span style="color: #7388D6;">(</span>vc-annotate-color-map
-   <span style="color: #909183;">(</span><span style="color: #0000FF;">quote</span>
-    <span style="color: #709870;">(</span><span style="color: #907373;">(</span><span style="color: #D0372D;">20</span> . <span style="color: #008000;">"#C99090"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">40</span> . <span style="color: #008000;">"#D9A0A0"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">60</span> . <span style="color: #008000;">"#ECBC9C"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">80</span> . <span style="color: #008000;">"#DDCC9C"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">100</span> . <span style="color: #008000;">"#EDDCAC"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">120</span> . <span style="color: #008000;">"#FDECBC"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">140</span> . <span style="color: #008000;">"#6C8C6C"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">160</span> . <span style="color: #008000;">"#8CAC8C"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">180</span> . <span style="color: #008000;">"#9CBF9C"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">200</span> . <span style="color: #008000;">"#ACD2AC"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">220</span> . <span style="color: #008000;">"#BCE5BC"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">240</span> . <span style="color: #008000;">"#CCF8CC"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">260</span> . <span style="color: #008000;">"#A0EDF0"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">280</span> . <span style="color: #008000;">"#79ADB0"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">300</span> . <span style="color: #008000;">"#89C5C8"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">320</span> . <span style="color: #008000;">"#99DDE0"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">340</span> . <span style="color: #008000;">"#9CC7FB"</span><span style="color: #907373;">)</span>
-     <span style="color: #907373;">(</span><span style="color: #D0372D;">360</span> . <span style="color: #008000;">"#E090C7"</span><span style="color: #907373;">)</span><span style="color: #709870;">)</span><span style="color: #909183;">)</span><span style="color: #7388D6;">)</span>
- '<span style="color: #7388D6;">(</span>vc-annotate-very-old-color <span style="color: #008000;">"#E090C7"</span><span style="color: #7388D6;">)</span><span style="color: #707183;">)</span>
-<span style="color: #707183;">(</span>custom-set-faces
- <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">custom-set-faces was added by Custom.</span>
- <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If you edit it by hand, you could mess it up, so be careful.</span>
- <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">Your init file should contain only one such instance.</span>
- <span style="color: #8D8D84;">;; </span><span style="color: #8D8D84; font-style: italic;">If there is more than one, they won't work right.</span>
- '<span style="color: #7388D6;">(</span>default <span style="color: #909183;">(</span><span style="color: #709870;">(</span>t <span style="color: #907373;">(</span><span style="color: #006FE0;">:background</span> nil<span style="color: #907373;">)</span><span style="color: #709870;">)</span><span style="color: #909183;">)</span><span style="color: #7388D6;">)</span><span style="color: #707183;">)</span>
-
-</pre>
+<tr>
+<td class="org-left"><code>M-x cider-connect</code></td>
+<td class="org-left">After running <code>lein repl</code>, use host and port to connect to nREPL</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Andrew Jarrett</p>
-<p class="date">Created: 2017-12-20 Wed 00:56</p>
+<p class="date">Created: 2017-12-28 Thu 12:34</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
