@@ -77,6 +77,31 @@ Resource: [[https://ontologicalblog.files.wordpress.com/2016/11/spacemacs_cheat_
  fast.*”
 
  I feel like that last part is key.
+* Emacs (Including Evil Mode)
+| Command         | Behavior                                                       | Native in emacs? |
+|-----------------+----------------------------------------------------------------+------------------|
+| =C-z=           | Toggle Emacs state (important!)                                | No               |
+| =C-h a=         | Enter Apropos mode, search and learn about different elisp fns | Yes              |
+| =C-h f=         | Describe function (=describe-function=)                        | Yes              |
+| =C-w C-o=       | Switch to other window                                         | Yes              |
+| =C-x C-e=       | Evaluate last s-expression                                     | Yes              |
+| =C-u C-x C-e=   | Evaluates and prints last s-expression                         | Yes              |
+| =C-x 0=         | Kill current window                                            | Yes              |
+| =C-x 1=         | Make current window, the only window (hide others)             | Yes              |
+| =C-x o=         | Switch to other window                                         | Yes              |
+| =C-h m=         | See enabled minor modes (and list of commands)                 | Yes              |
+| =C-h k=         | See help docs associated with a particular keystroke           | Yes              |
+| =M-x el-cu RET= | elint-current-buffer                                           | Yes              |
+
+** Notes
+*** Interactive Mode
+Tip from [[https://www.gnu.org/software/emacs/manual/pdf/eintr.pdf][Intro to Emacs Lisp]]: When creating an interactive function (which is designed to have side-effects), evaluating the function with =C-x C-e= doesn't print anything in the message window. To get around this, you can use the *message* function to print something to the screen.
+** Org Mode in Emacs
+| Command   | Behavior                                             |
+|-----------+------------------------------------------------------|
+| =C-c C-c= | Evaluate source code block & print under #+RESULTS   |
+| =C-c '=   | Enter source code block buffer w/ proper indentation |
+
 * Emacs Manual (DocView)
 
 [[https://www.gnu.org/software/emacs/manual/html_node/emacs/DocView-Navigation.html][DocView Navigation Resource]]
@@ -139,25 +164,6 @@ console.log(a) // [constructor: ƒ, concat: ƒ, pop: ƒ, push: ƒ, shift: ƒ, �
 factorial(5)
 #+END_SRC
 
-* Emacs (Evil Mode)
-** Table
-| Command         | Behavior                                             | Native in emacs? |
-|-----------------+------------------------------------------------------+------------------|
-| =C-z=           | Toggle Emacs state (important!)                      | No               |
-| =C-h f=         | Describe function (=describe-function=)              | Yes              |
-| =C-w C-o=       | Switch to other window                               | Yes              |
-| =C-x C-e=       | Evaluate last s-expression                           | Yes              |
-| =C-u C-x C-e=   | Evaluates and prints last s-expression               | Yes              |
-| =C-x 0=         | Kill current windoe                                  | Yes              |
-| =C-x 1=         | Make current window, the only window (hide others)   | Yes              |
-| =C-x o=         | Switch to other window                               | Yes              |
-| =C-h m=         | See enabled minor modes (and list of commands)       | Yes              |
-| =C-h k=         | See help docs associated with a particular keystroke | Yes              |
-| =M-x el-cu RET= | elint-current-buffer                                 | Yes              |
-
-** Notes
-*** Interactive Mode
-Tip from [[https://www.gnu.org/software/emacs/manual/pdf/eintr.pdf][Intro to Emacs Lisp]]: When creating an interactive function (which is designed to have side-effects), evaluating the function with =C-x C-e= doesn't print anything in the message window. To get around this, you can use the *message* function to print something to the screen.
 * Clojure/ClojureScript
 ** Inf-Clojure Mode
 
